@@ -1,2 +1,1 @@
-photo_2023-05-08_16-33-58.jpg:photo_2023-05-08_16-33-58.jpg
-photo_2023-05-08_16-33-58.jpg:photo_2023-05-08_16-33-58.jpg
+/home/zirael/Downloads/photo_2023-04-24_16-07-242.jpg:1003

@@ -9,6 +9,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Random;
 import java.util.Scanner;
 
 public class ImageManager {
@@ -51,9 +52,10 @@ public class ImageManager {
 
     private void saveData() {
         try {
+            Random rand = new Random();
             BufferedWriter writer = new BufferedWriter(new FileWriter(dataFile, true));
             for (String imageName : images.keySet()) {
-                writer.write(imageName + ":" + getImagePath(images.get(imageName)) + "\n");
+                writer.write(imageName + ":" + (rand.nextInt(6)+1000) + "\n");
             }
             writer.close();
         } catch (IOException e) {
@@ -86,7 +88,7 @@ public class ImageManager {
         try {
             img = ImageIO.read(new File(imagePath));
         } catch (IOException e) {
-            e.printStackTrace();
+           // e.printStackTrace();
         }
         return img;
     }
